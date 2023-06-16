@@ -18,10 +18,18 @@ const users = [
 
 //all routes in here are starting with /users
 router.get('/', (req, res) => {
-    console.log(users);
-    res.send('hello');
+    res.send(users);    //let send some usefull thing so the user can see
 });
 
-router.post('/', (req, res));
+router.post('/', (req, res) => {
+
+    const user = req.body;
+
+    users.push(user);
+
+    //with pust we can add the value to an array 
+    res.send(`user with the name ${user.firstName} added to the database`);
+});
+
 
 export default router;

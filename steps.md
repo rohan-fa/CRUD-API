@@ -66,7 +66,49 @@ const users = [
     }
 ]
 ```
-- in post method we can no longer use browser, browser only makes get req
+- in post method we can no longer use browser, browser only makes get req. need postman for that 
+### Postman 
+```
+http://localhost:5000 //make a get request
+
+```
+- making a post req in postman 
+inside body
+```
+POST res http://localhost:5000/users
+
+{
+    "firstName" : "chubby",
+    "lastName" : "larry",
+    "age" : 324
+}
+```
+```
+router.post('/', (req, res) => {
+    console.log('POST ROUTES');
+
+    console.log(req.body);
+    //with pust we can add the value to an array 
+    res.send('shoqw me');
+});
+```
+-after writing this code go to the postman and resend the request
+and see in the terminal the output 
+- now we can put (req.body) in constant as we know whats in there
+
+```
+npm install uuid
+
+```
+- as we gave snow other people can have the same name so we need unique id for that 
+
+
+
+
+
+
+
+
 
 
 
