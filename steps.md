@@ -214,7 +214,8 @@ router.patch('/:id', (req, res) => {
 });
 ````
 for this we can change many properties of a user
-
+### Controllers
+in the users.js we have tons of logic and pretty messy to look at so we can separate it in controller. Inside of the controller you can crea
 
 
 
